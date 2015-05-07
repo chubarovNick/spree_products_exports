@@ -10,6 +10,8 @@ module SpreeProductsExport
     end
 
     def generate(product_export)
+      product_export.processed_rows = 0
+      product_export.save!
       csv_string = CSV.generate do |csv|
         csv.add_row csv_headers
         Spree::Variant.all.find_each(batch_size: BATCH_SIZE) do |variant|
