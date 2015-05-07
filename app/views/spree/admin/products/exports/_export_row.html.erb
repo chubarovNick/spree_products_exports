@@ -1,0 +1,9 @@
+<tr id="<%= spree_dom_id product_export %>" data-hook="admin_product_exports_index_rows" class="<%= cycle('odd', 'even')%>">
+  <td class="align-center"><%= pretty_time(product_export.created_at) %></td>
+  <td class="align-center"><%= product_export.total_rows%></td>
+  <td class="align-center"><%= product_export.processed_rows %></td>
+  <td class="align-center"><%= product_export.finish_percent %> %</td>
+  <td class="align-center"><%= link_to('CSV File', product_export.attachment.url) if product_export.attachment_file_name.present? %></td>
+  <td data-hook="admin_shipping_methods_index_row_actions" class="actions">
+  </td>
+</tr>

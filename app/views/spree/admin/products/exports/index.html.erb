@@ -1,0 +1,20 @@
+<% content_for :page_title do %>
+    <%= Spree.t(:product_export) %>
+<% end %>
+
+<% content_for :page_actions do %>
+    <li>
+      <%= button_link_to Spree.t(:new_product_export), admin_exports_url ,  :icon => 'plus', :id => 'admin_new_product_export_link', method: :post, remote: :true %>
+    </li>
+<% end %>
+<div id="product_exports_wrpper">
+  <% if @product_exports.any? %>
+      <%=	render partial: 'table' %>
+  <% else %>
+      <div class="alpha twelve columns no-objects-found">
+        <%= Spree.t(:no_resource_found, resource: I18n.t(:other, scope: 'activerecord.models.spree/product_export')) %>
+      </div>
+  <% end %>
+</div>
+
+

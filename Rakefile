@@ -5,6 +5,7 @@ require 'rspec/core/rake_task'
 require 'spree/testing_support/extension_rake'
 
 RSpec::Core::RakeTask.new
+require 'spree_products_export'
 
 task :default do
   if Dir["spec/dummy"].empty?
