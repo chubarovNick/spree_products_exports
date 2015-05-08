@@ -10,7 +10,7 @@ module Spree
 
     def finish_percent
       if total_rows > 0
-        processed_rows / total_rows * 100.0
+        (processed_rows / total_rows.to_f) * 100
       else
         100
       end

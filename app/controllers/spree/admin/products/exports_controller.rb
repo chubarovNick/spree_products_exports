@@ -4,7 +4,7 @@ module Spree
       class ExportsController < BaseController
 
         def index
-          @product_exports = Spree::ProductExport.all
+          @product_exports = Spree::ProductExport.all.order(:created_at)
           respond_with @product_exports
         end
 
