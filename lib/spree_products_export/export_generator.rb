@@ -14,7 +14,7 @@ module SpreeProductsExport
       product_export.save!
       csv_string = CSV.generate do |csv|
         csv.add_row csv_headers
-        Spree::Variant.all.find_each(batch_size: BATCH_SIZE) do |variant|
+        Spree::Variant.where(is_master: false).find_each(batch_size: BATCH_SIZE) do |variant|
           csv.add_row variant_line_data(variant)
           product_export.increment(:processed_rows).save
         end
