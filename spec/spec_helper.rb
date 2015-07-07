@@ -35,7 +35,7 @@ require 'spree_products_export/factories'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
-
+  config.include Spree::TestingSupport::ControllerRequests
   # Infer an example group's spec type from the file location.
   config.infer_spec_type_from_file_location!
 
