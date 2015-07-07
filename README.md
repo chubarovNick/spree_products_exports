@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/chubarovNick/spree_products_exports.svg?branch=master)](https://travis-ci.org/chubarovNick/spree_products_exports)
+[![Code Climate](https://codeclimate.com/github/chubarovNick/spree_products_exports/badges/gpa.svg)](https://codeclimate.com/github/chubarovNick/spree_products_exports)
+[![Test Coverage](https://codeclimate.com/github/chubarovNick/spree_products_exports/badges/coverage.svg)](https://codeclimate.com/github/chubarovNick/spree_products_exports/coverage)
 SpreeProductsExport
 ===================
 
